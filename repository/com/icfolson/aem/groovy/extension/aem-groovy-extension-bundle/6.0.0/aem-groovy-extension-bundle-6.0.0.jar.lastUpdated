@@ -1,0 +1,12 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Sat Mar 09 13:15:11 PST 2019
+file\:/Volumes/UserHD/Users/achaefa/Development/headwire/Adobe/aem.65.milestone/GGP/aem-groovy-console/../../repository/.lastUpdated=1552166092320
+file\:/Volumes/UserHD/Users/achaefa/Development/headwire/Adobe/aem.65.milestone/GGP/aem-groovy-console/../../repository/.error=
+https\://repo.adobe.com/nexus/content/groups/public/.error=
+https\://oss.sonatype.org/content/groups/public/.lastUpdated=1552165953865
+https\://repo.adobe.com/nexus/content/groups/public/.lastUpdated=1552166092093
+http\://repo.adobe.com/nexus/content/groups/public/.error=
+http\://repo.adobe.com/nexus/content/groups/public/.lastUpdated=1552165949528
+508e5d87023f6343a5c7d27ca64961fcade2c331@default-artifactory-dev-releases-https\://artifactory.corp.adobe.com/artifactory/maven-aem-dev/.lastUpdated=1552165950417
+https\://repo.maven.apache.org/maven2/.lastUpdated=1552166111345
+https\://artifactory.corp.adobe.com/artifactory/maven-aem-dev/.error=Could not transfer artifact com.icfolson.aem.groovy.extension\:aem-groovy-extension-bundle\:jar\:6.0.0 from/to artifactory-dev-releases (https\://artifactory.corp.adobe.com/artifactory/maven-aem-dev)\: Received fatal alert\: handshake_failure

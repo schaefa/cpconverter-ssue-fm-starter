@@ -1,0 +1,11 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Sat Mar 09 13:03:34 PST 2019
+@default-project.local-file\:${project.basedir}/../../repository/.lastUpdated=1552165411067
+https\://repo.adobe.com/nexus/content/groups/public/.error=
+https\://repo.adobe.com/nexus/content/groups/public/.lastUpdated=1552165410972
+http\://repo.adobe.com/nexus/content/groups/public/.error=
+http\://repo.adobe.com/nexus/content/groups/public/.lastUpdated=1552165410269
+508e5d87023f6343a5c7d27ca64961fcade2c331@default-artifactory-dev-releases-https\://artifactory.corp.adobe.com/artifactory/maven-aem-dev/.lastUpdated=1552165410594
+file\:${project.basedir}/../../repository/.error=Could not transfer artifact com.icfolson.aem\:aem-parent-uber-jar\:pom\:6.3.1.1 from/to project.local (file\:${project.basedir}/../../repository/)\: Repository path ${project.basedir}/../../repository does not exist, and cannot be created.
+https\://repo.maven.apache.org/maven2/.lastUpdated=1552165414741
+https\://artifactory.corp.adobe.com/artifactory/maven-aem-dev/.error=Could not transfer artifact com.icfolson.aem\:aem-parent-uber-jar\:pom\:6.3.1.1 from/to artifactory-dev-releases (https\://artifactory.corp.adobe.com/artifactory/maven-aem-dev)\: Received fatal alert\: handshake_failure
