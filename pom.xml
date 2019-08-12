@@ -30,29 +30,45 @@ under the License.
     <name>Project to showcase CP Converter issues</name>
     <packaging>slingosgifeature</packaging>
 
-    <repositories>
-        <repository>
-            <id>project.local</id>
-            <name>project</name>
-            <url>file:${maven.multiModuleProjectDirectory}/repository</url>
-        </repository>
-    </repositories>
+<!--    <repositories>-->
+<!--        <repository>-->
+<!--            <snapshots>-->
+<!--                <enabled>true</enabled>-->
+<!--                <updatePolicy>always</updatePolicy>-->
+<!--                <checksumPolicy>warn</checksumPolicy>-->
+<!--            </snapshots>-->
+<!--            <id>project.local</id>-->
+<!--            <name>project</name>-->
+<!--            <url>file:${maven.multiModuleProjectDirectory}/repository</url>-->
+<!--        </repository>-->
+<!--    </repositories>-->
 
-    <pluginRepositories>
-        <pluginRepository>
-            <id>project.local.plugins</id>
-            <name>project.plugins</name>
-            <url>file:${maven.multiModuleProjectDirectory}/repository</url>
-        </pluginRepository>
-    </pluginRepositories>
+<!--    <pluginRepositories>-->
+<!--        <pluginRepository>-->
+<!--            <snapshots>-->
+<!--                <enabled>true</enabled>-->
+<!--                <updatePolicy>always</updatePolicy>-->
+<!--                <checksumPolicy>warn</checksumPolicy>-->
+<!--            </snapshots>-->
+<!--            <id>project.local.plugins</id>-->
+<!--            <name>project.plugins</name>-->
+<!--            <url>file:${maven.multiModuleProjectDirectory}/repository</url>-->
+<!--        </pluginRepository>-->
+<!--    </pluginRepositories>-->
 
     <dependencies>
         <dependency>
-            <groupId>com.icfolson.aem.groovy.console</groupId>
-            <artifactId>aem-groovy-console</artifactId>
-            <version>13.0.0</version>
+            <groupId>org.apache.sling.test</groupId>
+            <artifactId>ui.apps</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
             <type>zip</type>
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.icfolson.aem.groovy.console</groupId>-->
+<!--            <artifactId>aem-groovy-console</artifactId>-->
+<!--            <version>13.0.0</version>-->
+<!--            <type>zip</type>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>org.apache.sling</groupId>
             <artifactId>org.apache.sling.jcr.packageinit</artifactId>
@@ -131,8 +147,10 @@ under the License.
                             <fmPrefix>aem-groovy-console-</fmPrefix>
                             <contentPackages>
                                 <contentPackage>
-                                    <groupId>com.icfolson.aem.groovy.console</groupId>
-                                    <artifactId>aem-groovy-console</artifactId>
+<!--                                    <groupId>com.icfolson.aem.groovy.console</groupId>-->
+<!--                                    <artifactId>aem-groovy-console</artifactId>-->
+                                    <groupId>org.apache.sling.test</groupId>
+                                    <artifactId>ui.apps</artifactId>
                                 </contentPackage>
                             </contentPackages>
                         </configuration>
