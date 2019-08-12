@@ -59,6 +59,45 @@ Could not find artifact test-group:ui.apps:zip:cp2fm-converted:1.0.0-SNAPSHOT
 in apache.snapshots (https://repository.apache.org/snapshots) -> [Help 1]
 ```
 
+### Bundle-Name Header with Spaces
+
+* Branch: **issue/bundle-name**
+* Ticket: [SLING-8626][SLING-8626]
+* Temporary Fix: add a colon / underscore instead of the space
+* Issues:
+1. The Artifact Id is not valid because of the space
+
+#### Project Dependencies
+
+* Build **sling-slingfeature-maven-plugin** branch **issues/SLING-8626**
+
+The rest of the dependencies are either publicly available or they
+provided by the project-local repo (folder **repository**)
+
+#### Test Run
+
+**Attention**: there is a chance that `mvn clean` does not work or does
+nothing so you might need to delete the **target** folder 
+After the project dependencies are built you can run this test with:
+```
+mvn package
+```
+The first run will fail because of an issue with the Sling Feature Maven
+Plugin that does not recognize generated FM files.
+Executing
+```
+mvn package
+```
+will finally show this issue:
+```
+[ERROR] Internal error: java.lang.RuntimeException: Feature file
+cpconverter-issue-fm-starter/target/fm/aem-groovy-console.json validation
+detected one or more errors:
+[ERROR]  * /definitions/Bundle/properties/id: ECMA 262 regex 
+"^(([^: ]+):([^: ]+)(:([^: ]*)(:([^: ]+))?)?:([^: ]+)|(mvn:)?([^/ ]+)/([^/ ]+)(/([^/ ]+))?(/([^/ ]*)(/([^/ ]+))?)?)$" 
+does not match input string "groovy-all:Groovy Runtime:2.4.15"
+```
+
 [SLING-8626]: https://issues.apache.org/jira/browse/SLING-8626
 
 ## Run Test Project
