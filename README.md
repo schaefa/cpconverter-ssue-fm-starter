@@ -38,15 +38,17 @@ provided by the project-local repo (folder **repository**)
 
 #### Test Run
 
+**Attention**: there is a chance that `mvn clean` does not work or does
+nothing so you might need to delete the **target** folder 
 After the project dependencies are built you can run this test with:
 ```
-mvn clean install
+mvn package
 ```
 The first run will fail because of an issue with the Sling Feature Maven
 Plugin that does not recognize generated FM files.
 Executing
 ```
-mvn clean install
+mvn package
 ```
 will finally show this issue:
 ```

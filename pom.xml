@@ -63,12 +63,12 @@ under the License.
             <version>1.0.0-SNAPSHOT</version>
             <type>zip</type>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>com.icfolson.aem.groovy.console</groupId>-->
-<!--            <artifactId>aem-groovy-console</artifactId>-->
-<!--            <version>13.0.0</version>-->
-<!--            <type>zip</type>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>com.icfolson.aem.groovy.console</groupId>
+            <artifactId>aem-groovy-console</artifactId>
+            <version>13.0.0</version>
+            <type>zip</type>
+        </dependency>
         <dependency>
             <groupId>org.apache.sling</groupId>
             <artifactId>org.apache.sling.jcr.packageinit</artifactId>
@@ -147,10 +147,8 @@ under the License.
                             <fmPrefix>aem-groovy-console-</fmPrefix>
                             <contentPackages>
                                 <contentPackage>
-<!--                                    <groupId>com.icfolson.aem.groovy.console</groupId>-->
-<!--                                    <artifactId>aem-groovy-console</artifactId>-->
-                                    <groupId>org.apache.sling.test</groupId>
-                                    <artifactId>ui.apps</artifactId>
+                                    <groupId>com.icfolson.aem.groovy.console</groupId>
+                                    <artifactId>aem-groovy-console</artifactId>
                                 </contentPackage>
                             </contentPackages>
                         </configuration>
