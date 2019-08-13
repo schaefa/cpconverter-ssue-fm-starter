@@ -142,6 +142,7 @@ under the License.
                                        and ${{{ / }}} is used to make it a CP Conversion Placeholder }-->
                             <artifactIdOverride>${{project.groupId}}:${{project.artifactId}}:slingosgifeature:${{{filename}}}:${{project.version}}</artifactIdOverride>
                             <installConvertedCP>true</installConvertedCP>
+                            <!-- Attention: because of the hack to deal with the overrides in the local Repo the generated files must be placed locally and not in the local Maven repo -->
                             <convertedCPOutput>${project.build.directory}/fm.out</convertedCPOutput>
                             <fmOutput>${project.build.directory}/fm</fmOutput>
                             <fmPrefix>aem-groovy-console-</fmPrefix>
@@ -162,6 +163,7 @@ under the License.
                 <extensions>true</extensions>
                 <configuration>
                     <features>target/fm</features>
+                    <generatedFeatures>${basedir}/target/fm</generatedFeatures>
                 </configuration>
                 <executions>
                     <execution>
