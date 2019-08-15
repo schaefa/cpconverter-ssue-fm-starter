@@ -15,71 +15,33 @@ These must be built ahead of compiling this project.
 The project contains multiple branches to showcase the various issues
 where some of the issues are manually fixed to move ahead.
 
-### Package Group vs. Maven Group Issue
+### Converted Content Packages not Launching
 
-* Branch: **issue/package-group**
-* Ticket: [SLING-8626][SLING-8626]
-* Temporary Fix: maven the package group the same name as the Maven group
-* Issues:
-1. The converter's convert() method is not returning feedback on where it
-placed the files and so it is very difficult to automate the installation
-of the converted files into the local Maven repository
-2. Because the CP Converter uses the package group and that one is
-different from the Maven group the Sling FM Plugin will look up the
-converted dependency in the package group path but the POM of that file
-is in the Maven group path which causes conflicts in the Sling FM Plugin
+* Branch: **issue/cp-not-launching**
+* Ticket: none so far
+* Temporary Fix: none
+* Issues: After building (first **test-package** then root project
+and launching the project the /system/console/osgi-installer will report
+that CP is a **Untransformed Resource**.
 
 #### Project Dependencies
 
-* Build **sling-slingfeature-maven-plugin** branch **issues/SLING-8626**
+* Build **sling-slingfeature-maven-plugin** branch **master**
 
 The rest of the dependencies are either publicly available or they
 provided by the project-local repo (folder **repository**)
 
 #### Test Run
 
-**Attention**: there is a chance that `mvn clean` does not work or does
-nothing so you might need to delete the **target** folder 
-After the project dependencies are built you can run this test with:
+Build the project this way:
 ```
-mvn package
-```
-The first run will fail because of an issue with the Sling Feature Maven
-Plugin that does not recognize generated FM files.
-Executing
-```
-mvn package
-```
-will finally show this issue:
-```
-[ERROR] Failed to execute goal on project org.apache.sling.cpconverter.issue: 
-Could not resolve dependencies for project 
-org.apache.sling:org.apache.sling.cpconverter.issue:slingosgifeature:1.0.0-SNAPSHOT: 
-Could not find artifact test-group:ui.apps:zip:cp2fm-converted:1.0.0-SNAPSHOT 
-in apache.snapshots (https://repository.apache.org/snapshots) -> [Help 1]
-```
-
-[SLING-8626]: https://issues.apache.org/jira/browse/SLING-8626
-
-## Run Test Project
-
-### Prepare
-
-All plugin and dependencies of not released code is incorporated into a
-project local project as well as the Sling Starter Provisioning Model
-so no further preparations are necessary.
-
-### Build and Launch
-
-This project is built with standard Maven command:
-```
+cd test-package
 mvn clean install
-```
-
-To launch it just add the **launch** profile:
-```
+cd ..
 mvn clean install -P launch
 ```
-
-Sling will start but you will see many dependency issues but as long as
-Sling starts we are good here.
+Wait until Sling is up and running then go to:
+```
+http://localhost:8080/system/console/osgi-installer
+```
+The test package converted ui.apps is listed as **Untransformed Resources**. 
