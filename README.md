@@ -26,7 +26,7 @@ that CP is a **Untransformed Resource**.
 
 #### Project Dependencies
 
-* Build **sling-slingfeature-maven-plugin** branch **master**
+* Build **sling-slingfeature-maven-plugin** branch **issues/SLING-8640**
 
 The rest of the dependencies are either publicly available or they
 provided by the project-local repo (folder **repository**)
