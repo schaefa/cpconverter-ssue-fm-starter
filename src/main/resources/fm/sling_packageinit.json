@@ -6,6 +6,10 @@
     {
       "id":"org.apache.sling:org.apache.sling.jcr.packageinit:0.0.1-SNAPSHOT",
       "start-level":"10"
+    },
+    {
+      "id":"org.apache.sling:org.apache.sling.installer.factory.packages:0.1.0-SNAPSHOT",
+      "start-level":"10"
     }
   ]
 }
