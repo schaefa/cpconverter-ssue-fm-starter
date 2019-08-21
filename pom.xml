@@ -148,8 +148,6 @@ under the License.
                             <fmPrefix>aem-groovy-console-</fmPrefix>
                             <contentPackages>
                                 <contentPackage>
-<!--                                    <groupId>com.icfolson.aem.groovy.console</groupId>-->
-<!--                                    <artifactId>aem-groovy-console</artifactId>-->
                                     <groupId>org.apache.sling.test</groupId>
                                     <artifactId>ui.apps</artifactId>
                                 </contentPackage>
@@ -238,6 +236,18 @@ under the License.
                         <artifactId>slingfeature-maven-plugin</artifactId>
                         <version>1.0.7-SNAPSHOT</version>
                         <extensions>true</extensions>
+                        <dependencies>
+                            <dependency>
+                                <groupId>org.apache.sling</groupId>
+                                <artifactId>org.apache.sling.feature.launcher</artifactId>
+                                <version>1.0.7-SNAPSHOT</version>
+                            </dependency>
+                            <dependency>
+                                <groupId>org.apache.sling</groupId>
+                                <artifactId>org.apache.sling.feature.extension.content</artifactId>
+                                <version>1.0.5-SNAPSHOT</version>
+                            </dependency>
+                        </dependencies>
                         <executions>
                             <execution>
                                 <id>launch-it</id>
@@ -246,7 +256,9 @@ under the License.
                                     <goal>launch-features</goal>
                                 </goals>
                                 <configuration>
-                                    <featureFile>${project.build.directory}/slingfeature-tmp/feature-example-runtime.json</featureFile>
+                                    <selection>
+                                        <includeClassifier>example-runtime</includeClassifier>
+                                    </selection>
                                 </configuration>
                             </execution>
                         </executions>
